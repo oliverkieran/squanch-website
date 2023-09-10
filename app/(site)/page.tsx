@@ -5,6 +5,7 @@ import Feature from "@/components/Features";
 import About from "@/components/About";
 import FeaturesTab from "@/components/FeaturesTab";
 import FunFact from "@/components/FunFact";
+import NextGames from "@/components/NextGames";
 import Integration from "@/components/Integration";
 import CTA from "@/components/CTA";
 import FAQ from "@/components/FAQ";
@@ -25,6 +26,7 @@ export default function Home() {
     <main>
       <Hero />
       <Brands />
+      <NextGames />
       <Feature />
       <About />
       <FeaturesTab />
