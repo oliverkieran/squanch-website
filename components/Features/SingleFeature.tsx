@@ -4,8 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, description } = feature;
-
+  const { icon, title, description, tag, tagColor} = feature;
   return (
     <>
       <motion.div
@@ -24,14 +23,17 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         whileInView="visible"
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection z-40 bg-white"
+        className="animate_top rounded-lg p-4 xl:p-5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection z-40"
       >
-        <div className="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16 relative">
-          <Image src={icon} width={36} height={36} alt="title" />
+        <div className="flex items-center justify-center rounded-full bg-primary w-10 h-10 relative">
+          <Image src={icon} width={20} height={20} alt="title" />
         </div>
-        <h3 className="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5 mb-5">
+        <h3 className="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-5 mb-2">
           {title}
         </h3>
+        <div className={`inline-block px-2 py-1 mb-5 text-xs font-medium text-black bg-${tagColor} rounded`}>
+          {tag}
+        </div>
         <p>{description}</p>
       </motion.div>
     </>

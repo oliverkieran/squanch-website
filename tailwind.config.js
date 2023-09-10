@@ -37,6 +37,7 @@ module.exports = {
       zumthor: "#EDF5FF",
       socialicon: "#D1D8E0",
       gametime: "#88ED91",
+      commentator: "#7791FF",
     },
     extend: {
       fontSize: {

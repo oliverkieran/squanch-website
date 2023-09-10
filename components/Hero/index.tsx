@@ -80,7 +80,7 @@ const Hero = () => {
                   />
                   <Image
                     className="hidden dark:block shadow-solid-l"
-                    src="/images/hero/hero-dark.svg"
+                    src="/images/hero/demo.png"
                     alt="Hero"
                     fill
                   />

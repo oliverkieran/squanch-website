@@ -4,44 +4,38 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: "/images/icon/icon-01.svg",
-    title: "Crafted for SaaS",
+    title: "Quick Setup",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "All it takes to listen to your favorite commentators is just one simple download. Simply download the app and you're ready to go!",
+    tag: "Viewer",
+    tagColor: "gametime",
   },
   {
     id: 2,
-    icon: "/images/icon/icon-02.svg",
-    title: "High-quality Design",
+    icon: "/images/icon/icon-06.svg",
+    title: "Automatic Synchronization",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Once a commentator is selected, the app will automatically synchronize the audio with the game.",
+    tag: "Viewer",
+    tagColor: "gametime",
   },
   {
     id: 3,
     icon: "/images/icon/icon-03.svg",
-    title: "Next.js 13 + TypeScript",
+    title: "Custom Fine Tuning",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "In case our synchronization is not spot-on, we provide you with fine-tuning controls to get the synchronization just right.",
+    tag: "Viewer",
+    tagColor: "gametime",
   },
   {
     id: 4,
     icon: "/images/icon/icon-04.svg",
-    title: "Sanity Blog and Docs",
+    title: "One-Click Synchronization",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
-  },
-  {
-    id: 5,
-    icon: "/images/icon/icon-05.svg",
-    title: "DB, Auth and Stripe",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
-  },
-  {
-    id: 6,
-    icon: "/images/icon/icon-06.svg",
-    title: "Regular Free Updates",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "As a commentator, all you need to do is click one single button to synchronize your audio with all your fans.",
+    tag: "Commentator",
+    tagColor: "commentator",
   },
 ];
 

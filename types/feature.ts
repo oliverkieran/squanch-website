@@ -3,4 +3,6 @@ export type Feature = {
   icon: string;
   title: string;
   description: string;
+  tag: string;
+  tagColor: "gametime" | "commentator"
 };
