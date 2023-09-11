@@ -15,7 +15,7 @@ const FAQ = () => {
   return (
     <>
       {/* <!-- ===== FAQ Start ===== --> */}
-      <section className="pb-20 lg:pb-25 xl:pb-30 overflow-hidden">
+      <section id="faq" className="pb-20 lg:pb-25 xl:pb-30 overflow-hidden">
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0 relative">
           <div className="absolute -bottom-16 -z-1 w-full h-full">
             <Image
