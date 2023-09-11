@@ -3,18 +3,18 @@ import { FAQ } from "@/types/faq";
 const faqData: FAQ[] = [
   {
     id: 1,
-    quest: "Lorem ipsum dolor sit amet, consectetur",
-    ans: "We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.",
+    quest: "I want to commentate a game. How do I do that?",
+    ans: "Simply click the 'Commentate' button in the navigation bar and you will be taken to a page where you can select a fictious character and a game to commentate. To synchronize your voice with the game of other viewers, input the current game time and click the 'Synchronize' button.",
   },
   {
     id: 2,
-    quest: "Lorem ipsum dolor sit amet, consectetur",
-    ans: "We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.",
+    quest: "Is this project still active?",
+    ans: "We are currently not developing any new features for this project. However, we are still maintaining the project and will continue to do so for the foreseeable future. If you have any recommendations for new features, or are interested in collaborating with us, please contact us at info@squanch.tv.",
   },
   {
     id: 3,
-    quest: "Lorem ipsum dolor sit amet, consectetur",
-    ans: "We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.",
+    quest: "How can I support this project?",
+    ans: "Live Streaming is quite expensive. If you like to project and are interested in supporting, please contact us at info@squanch.tv.",
   },
 ];
 
