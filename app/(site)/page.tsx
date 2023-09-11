@@ -14,6 +14,25 @@ import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 
+/* Initial template
+<main>
+      <Hero />
+      <Brands />
+      <NextGames />
+      <Feature />
+      <About />
+      <Contact />
+      <FeaturesTab />
+      <FunFact />
+      <Integration />
+      <CTA />
+      <FAQ />
+      <Testimonial />
+      <Pricing />
+      <Blog />
+    </main>
+  */
+
 export const metadata: Metadata = {
   title: "Squanch - Crowdsourced Sports Commentary",
   description: "This is Home for Squanch",
@@ -29,15 +48,8 @@ export default function Home() {
       <NextGames />
       <Feature />
       <About />
-      <FeaturesTab />
-      <FunFact />
-      <Integration />
-      <CTA />
       <FAQ />
-      <Testimonial />
-      <Pricing />
       <Contact />
-      <Blog />
     </main>
   );
 }
