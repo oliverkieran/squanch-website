@@ -57,22 +57,24 @@ const Contact = () => {
               className="animate_top w-full md:w-3/5 lg:w-3/4 shadow-solid-8 rounded-lg bg-white dark:bg-black dark:border dark:border-strokedark p-7.5 xl:p-15"
             >
               <h2 className="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-semibold mb-15">
-                Send a message
+                Send us a message
               </h2>
 
               <form
-                action="https://formbold.com/s/unique_form_id"
+                action="https://formbold.com/s/9mN8j"
                 method="POST"
               >
                 <div className="flex flex-col lg:flex-row lg:justify-between gap-7.5 lg:gap-14 mb-7.5">
                   <input
                     type="text"
+                    name="name"
                     placeholder="Full name"
                     className="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
                   />
 
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email address"
                     className="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
                   />
@@ -81,12 +83,14 @@ const Contact = () => {
                 <div className="flex flex-col lg:flex-row lg:justify-between gap-7.5 lg:gap-14 mb-12.5">
                   <input
                     type="text"
+                    name="subject"
                     placeholder="Subject"
                     className="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
                   />
 
                   <input
                     type="text"
+                    name="phone"
                     placeholder="Phone number"
                     className="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
                   />
@@ -94,6 +98,7 @@ const Contact = () => {
 
                 <div className="flex mb-11.5">
                   <textarea
+                    name="message"
                     placeholder="Message"
                     rows={4}
                     className="w-full bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white"
@@ -104,6 +109,7 @@ const Contact = () => {
                   <div className="flex mb-4 md:mb-0">
                     <input
                       id="default-checkbox"
+                      name="consent"
                       type="checkbox"
                       value=""
                       className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 mt-2"
@@ -153,34 +159,20 @@ const Contact = () => {
               whileInView="visible"
               transition={{ duration: 2, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_top w-full md:w-2/5 lg:w-[26%] md:p-7.5 xl:pt-15"
+              className="animate_top md:block md:w-1/4 relative mx-auto md:p-7.5 xl:pt-15"
             >
-              <h2 className="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-semibold mb-12.5">
-                Find us
-              </h2>
-
-              <div className="mb-7 5">
-                <h4 className="font-medium text-black dark:text-white text-metatitle3 mb-4">
-                  Our Loaction
-                </h4>
-                <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
-              </div>
-              <div className="mb-7 5">
-                <h4 className="font-medium text-black dark:text-white text-metatitle3 mb-4">
-                  Email Address
-                </h4>
-                <p>
-                  <a href="#">yourmail@domainname.com</a>
-                </p>
-              </div>
-              <div>
-                <h4 className="font-medium text-black dark:text-white text-metatitle3 mb-4">
-                  Phone Number
-                </h4>
-                <p>
-                  <a href="#">+009 42334 6343 843</a>
-                </p>
-              </div>
+              <Image
+                src="./images/logo/logo-text-light.svg"
+                alt="Squanch"
+                className="dark:hidden"
+                fill
+              />
+              <Image
+                src="./images/logo/logo-text-dark.svg"
+                alt="Squanch"
+                className="hidden dark:block"
+                fill
+              />
             </motion.div>
           </div>
         </div>
