@@ -30,13 +30,13 @@ const About = () => {
               className="animate_left hidden md:block md:w-1/2 relative mx-auto aspect-[588/526.5]"
             >
               <Image
-                src="/images/about/about-light-01.png"
+                src="/images/about/extension-showcase.svg"
                 alt="About"
                 className="dark:hidden"
                 fill
               />
               <Image
-                src="/images/about/about-dark-01.png"
+                src="/images/about/extension-showcase.svg"
                 alt="About"
                 className="hidden dark:block"
                 fill
@@ -64,44 +64,22 @@ const About = () => {
                 <span className="bg-meta text-white text-metatitle inline-flex rounded-full py-1 px-4.5 mr-4 mb-4 uppercase ">
                   New
                 </span>{" "}
-                SaaS Boilerplate for Next.js
+                Super Easy Setup
               </h4>
               <h2 className="relative font-bold text-black dark:text-white text-3xl xl:text-hero mb-6">
-                A Complete Solution for
-                <span className="inline-block relative before:absolute before:bottom-2.5 before:left-0 before:w-full before:h-3 before:bg-titlebg dark:before:bg-titlebgdark before:-z-1">
-                  SaaS Startup
+                Download the 
+                <span className="ml-2.5 inline-block relative before:absolute before:bottom-2.5 before:left-0 before:w-full before:h-3 before:bg-gametime dark:before:bg-titlebgdark before:-z-1">
+                  Squanch
                 </span>
+                Chrome Extension
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
+                It's super eassy to get started with Squanch. Just download the Chrome Extension and you're ready to go!
+                The extension will automatically detect when you're watching a football game and will give you the option to choose a commentator.
               </p>
 
-              <div className="mt-7.5 flex items-center gap-5">
-                <div className="w-15 h-15 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
-                  <p className="text-black dark:text-white font-semibold text-metatitle2">
-                    01
-                  </p>
-                </div>
-                <div className="w-3/4">
-                  <h5 className="text-black dark:text-white text-metatitle2 mb-0.5">
-                    React 18, Next.js 13 and TypeScript
-                  </h5>
-                  <p>Ut ultricies lacus non fermentum ultrices.</p>
-                </div>
-              </div>
-              <div className="mt-7.5 flex items-center gap-5">
-                <div className="w-15 h-15 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
-                  <p className="text-black dark:text-white font-semibold text-metatitle2">
-                    02
-                  </p>
-                </div>
-                <div className="w-3/4">
-                  <h5 className="text-black dark:text-white text-metatitle2 mb-0.5">
-                    Fully Customizable
-                  </h5>
-                  <p>consectetur adipiscing elit fermentum ultricies.</p>
-                </div>
+              <div className="mt-7.5 flex justify-center items-center">
+                <button className="p-5 text-black font-semibold bg-gametime rounded-full">Download Here</button>
               </div>
             </motion.div>
           </div>

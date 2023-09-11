@@ -31,7 +31,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         <h3 className="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-5 mb-2">
           {title}
         </h3>
-        <div className={`inline-block px-2 py-1 mb-5 text-xs font-medium text-black bg-${tagColor} rounded`}>
+        <div className={`bg-${tagColor} inline-block px-2 py-1 mb-5 text-xs font-medium text-black rounded`}>
           {tag}
         </div>
         <p>{description}</p>
