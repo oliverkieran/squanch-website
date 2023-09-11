@@ -152,15 +152,8 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-6 mt-7 lg:mt-0">
+            <button className="px-5 py-2 text-black bg-gametime rounded-3xl">Download</button>
             <ThemeToggler />
-
-            <Link
-              href="https://github.com/NextJSTemplates/solid-nextjs"
-              className="text-waterloo text-regular font-medium hover:text-primary"
-            >
-            GitHub Repo 🌟
-            </Link>
-
           </div>
         </div>
       </div>

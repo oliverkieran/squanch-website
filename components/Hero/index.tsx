@@ -36,9 +36,11 @@ const Hero = () => {
 
               <div className="mt-5">
                 <div className="flex flex-wrap gap-5">
-                  <button
-                    className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
-                  >Viewer</button>
+                  <a href="#extension">
+                    <button
+                      className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
+                    >Viewer</button>
+                  </a>
                   <button
                     className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
                   >Commentator</button>
