@@ -1,9 +1,29 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const Stream = () => {
+
+  const [commentator, setCommentator] = useState('');
+  const [game, setGame] = useState('');
+
+  const createStream = async (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    try {
+        const body = { commentator, game };
+        console.log("BODY:", body);
+        const response = await fetch('/api/live-streams', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+        });
+        const data = await response.json();
+        console.log("RESPONSE:", data);
+        
+    } catch (error) {
+        console.error(error);
+    }
+  };
   return (
     <>
       <section id="stream" className="container mx-auto px-4 md:px-8 2xl-px-0">
@@ -14,23 +34,28 @@ const Stream = () => {
           Choose the commentator and the game you want to commentate:
         </p>
 
-        <form>
-          <input 
-            type="text" 
+        <form onSubmit={createStream}>
+          <input
+            type="text"
             name="name"
             placeholder="Name"
             className="flex flex-col w-1/2 border-b p-2 mb-5"
+            onChange={(e) => setCommentator(e.target.value)}
+            value={commentator}
           />
-          <input 
-            type="text" 
+          <input
+            type="text"
             name="game"
             placeholder="Game"
             className="flex flex-col w-1/2 border-b p-2 mb-5"
+            onChange={(e) => setGame(e.target.value)}
+            value={game}
           />
-          <button 
+          <input
             type="submit"
             className="bg-titlebg2 text-black px-4 py-2 rounded-lg mt-2"
-          >Go Live</button>
+            value="Go Live"
+          />
         </form>
       </section>
     </>
