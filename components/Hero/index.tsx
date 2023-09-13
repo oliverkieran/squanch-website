@@ -1,16 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <>
       <section className="pt-35 md:pt-40 xl:pt-46 pb-20 xl:pb-25 overflow-hidden">
@@ -39,14 +34,18 @@ const Hero = () => {
 
               <div className="mt-5">
                 <div className="flex flex-wrap gap-5">
-                  <a href="#extension">
-                    <button className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5">
-                      Viewer
-                    </button>
-                  </a>
-                  <button className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5">
+                  <Link
+                    href="#extension"
+                    className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
+                  >
+                    Viewer
+                  </Link>
+                  <Link
+                    href="/commentate"
+                    className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
+                  >
                     Commentator
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
