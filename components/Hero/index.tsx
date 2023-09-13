@@ -22,31 +22,32 @@ const Hero = () => {
               </h4>
               <h1 className="text-black dark:text-white text-3xl xl:text-hero font-bold mb-5 pr-16 ">
                 <span className="inline-block relative before:absolute before:bottom-2.5 before:left-0 before:w-full before:h-3 before:bg-titlebg dark:before:bg-titlebgdark before:-z-1 mr-2.5 ">
-                  Crowdsourcing 
+                  Crowdsourcing
                 </span>
                 Live Sports Commentary
               </h1>
               <p>
-              Squanch is developing a platform that will give <strong>anyone</strong> the opportunity to commentate football games in real-time. Viewers will be able to choose from a range of commentators based on their preferences.
+                Squanch is developing a platform that will give{" "}
+                <strong>anyone</strong> the opportunity to commentate football
+                games in real-time. Viewers will be able to choose from a range
+                of commentators based on their preferences.
               </p>
 
               <p className="text-black dark:text-white mt-10">
-                  Which experience to you want to try out?
+                Which experience do you want to try out?
               </p>
 
               <div className="mt-5">
                 <div className="flex flex-wrap gap-5">
                   <a href="#extension">
-                    <button
-                      className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
-                    >Viewer</button>
+                    <button className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5">
+                      Viewer
+                    </button>
                   </a>
-                  <button
-                    className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
-                  >Commentator</button>
-
+                  <button className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5">
+                    Commentator
+                  </button>
                 </div>
-
               </div>
             </div>
 
