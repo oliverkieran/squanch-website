@@ -1,27 +1,33 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Stream = () => {
-
-  const [commentator, setCommentator] = useState('');
-  const [game, setGame] = useState('');
+  const [commentator, setCommentator] = useState("");
+  const [game, setGame] = useState("");
+  const router = useRouter();
 
   const createStream = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     try {
-        const body = { commentator, game };
-        console.log("BODY:", body);
-        const response = await fetch('/api/live-streams', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(body),
-        });
+      const body = { commentator, game };
+      console.log("BODY:", body);
+      const response = await fetch("/api/live-streams", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      if (!response.ok) {
+        console.error({ error: "Live Stream could not be created." });
+      } else {
         const data = await response.json();
-        console.log("RESPONSE:", data);
-        
+        console.log("RESPONSE:", data.result);
+
+        // Route to stream page
+        router.push(`commentate/stream?id=${data.result.id}`);
+      }
     } catch (error) {
-        console.error(error);
+      console.error(error);
     }
   };
   return (

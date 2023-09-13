@@ -38,6 +38,7 @@ module.exports = {
       socialicon: "#D1D8E0",
       gametime: "#88ED91",
       commentator: "#7791FF",
+      info: "#F0F8FF",
     },
     extend: {
       fontSize: {
