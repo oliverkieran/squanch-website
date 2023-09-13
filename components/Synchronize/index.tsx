@@ -2,6 +2,10 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
+const capitalize = (str, lower = false) =>
+  (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) =>
+    match.toUpperCase()
+  );
 const Synchronize = () => {
   const [commentatorName, setCommentatorName] = useState("");
   const [game, setGame] = useState("");
@@ -35,7 +39,7 @@ const Synchronize = () => {
             </h2>
             <div className="flex flex-row gap-2 mb-2">
               <p className="text-md font-medium">Commentator: </p>
-              <p className="text-md">{commentatorName}</p>
+              <p className="text-md">{capitalize(commentatorName)}</p>
             </div>
             <div className="flex flex-row gap-2 mb-2">
               <p className="text-md font-medium">Game:</p>
