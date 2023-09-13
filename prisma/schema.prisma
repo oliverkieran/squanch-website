@@ -1,0 +1,47 @@
+// schema.prisma
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider  = "postgresql"
+    url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+    directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Commentator {
+    id            String    @id @default(cuid())
+    liveStreamId  String?
+    streamStart   DateTime?
+    streamKey     String?
+    playbackId    String?
+    gameOffset    Float?
+    commentator   User?     @relation(fields: [commentatorId], references: [id])
+    commentatorId String?
+    game          Game?     @relation(fields: [gameId], references: [id])
+    gameId        String?
+}
+
+model Game {
+    id             String        @id @default(cuid())
+    title          String        @unique
+    startTimestamp Float?
+    startTime      DateTime?
+    endTime        DateTime?
+    Commentators   Commentator[]
+}
+
+model User {
+    id          String        @id @default(cuid())
+    username    String?       @unique
+    firstname   String?
+    lastname    String?
+    email       String        @unique
+    password    String?
+    createdAt   DateTime      @default(now()) @map(name: "created_at")
+    updatedAt   DateTime      @updatedAt @map(name: "updated_at")
+    Commentator Commentator[]
+
+    @@map(name: "users")
+}
