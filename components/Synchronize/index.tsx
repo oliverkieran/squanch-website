@@ -37,11 +37,11 @@ const Synchronize = () => {
             <h2 className="text-black text-lg lg:text-xl font-semibold mb-2.5">
               General Information:
             </h2>
-            <div className="flex flex-row gap-2 mb-2">
+            <div className="flex flex-row gap-2 mb-2 text-black">
               <p className="text-md font-medium">Commentator: </p>
               <p className="text-md">{capitalize(commentatorName)}</p>
             </div>
-            <div className="flex flex-row gap-2 mb-2">
+            <div className="flex flex-row gap-2 mb-2 text-black">
               <p className="text-md font-medium">Game:</p>
               <p className="text-md">{game}</p>
             </div>
@@ -60,11 +60,11 @@ const Synchronize = () => {
                 <li>
                   Select the service as "Custom" and input the following URL:
                 </li>
-                <code className="ml-5 bg-alabaster dark:bg-waterloo dark:text-black p-1">
+                <code className="ml-5 bg-stroke dark:bg-waterloo dark:text-black p-1">
                   rtmps://global-live.mux.com:443/app
                 </code>
                 <li>Input the Stream Key:</li>
-                <code className="ml-5 bg-alabaster dark:bg-waterloo dark:text-black p-1">
+                <code className="ml-5 bg-stroke dark:bg-waterloo dark:text-black p-1">
                   {streamKey}
                 </code>
               </ol>

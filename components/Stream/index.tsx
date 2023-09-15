@@ -33,7 +33,7 @@ const Stream = () => {
   return (
     <>
       <section id="stream" className="container mx-auto px-4 md:px-8 2xl-px-0">
-        <h1 className="text-4xl font-semibold text-black mb-4">
+        <h1 className="text-4xl font-semibold text-black dark:text-white mb-4">
           Start a Stream
         </h1>
         <p className="text-lg mb-4">
@@ -59,7 +59,7 @@ const Stream = () => {
           />
           <input
             type="submit"
-            className="bg-titlebg2 text-black px-4 py-2 rounded-lg mt-2"
+            className="bg-primary text-white hover:bg-primaryho px-4 py-2 rounded-lg mt-2"
             value="Go Live"
           />
         </form>
