@@ -12,10 +12,10 @@ datasource db {
 
 model Commentator {
     id            String    @id @default(cuid())
-    liveStreamId  String?
+    liveStreamId  String?   @unique
     streamStart   DateTime?
-    streamKey     String?
-    playbackId    String?
+    streamKey     String?   @unique
+    playbackId    String?   @unique
     gameOffset    Float?
     commentator   User?     @relation(fields: [commentatorId], references: [id])
     commentatorId String?
