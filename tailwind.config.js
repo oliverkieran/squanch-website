@@ -39,6 +39,7 @@ module.exports = {
       gametime: "#88ED91",
       commentator: "#7791FF",
       info: "#BFDBFE",
+      success: "#22C55E"
     },
     extend: {
       fontSize: {

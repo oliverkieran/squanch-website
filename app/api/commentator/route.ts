@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
   }
 
   const response = await prisma.commentator.findUnique({
-    where: { id: id },
+    where: { id },
     include: {
       commentator: true,
       game: true,

@@ -6,14 +6,30 @@ const capitalize = (str, lower = false) =>
   (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) =>
     match.toUpperCase()
   );
+
+const mmssToSeconds = (mmss) => {
+  mmss = mmss.split(":");
+  const minutes = parseInt(mmss[0]);
+  const seconds = parseInt(mmss[1]);
+  return minutes * 60 + seconds;
+};
+
 const Synchronize = () => {
+  const [commentatorId, setCommentatorId] = useState("");
   const [commentatorName, setCommentatorName] = useState("");
   const [game, setGame] = useState("");
   const [streamKey, setStreamKey] = useState("");
   const [gametime, setGametime] = useState("");
+  const [syncText, setSyncText] = useState("Synchronize");
 
   const searchParams = useSearchParams();
-  const commentatorId = searchParams.get("id");
+  // Get commentator ID from URL at page load
+  useEffect(() => {
+    const id = searchParams.get("id");
+    if (id) {
+      setCommentatorId(id);
+    }
+  }, []);
 
   useEffect(() => {
     if (commentatorId) {
@@ -28,6 +44,50 @@ const Synchronize = () => {
         });
     }
   }, [commentatorId]);
+
+  const calculateOffset = async (formData: FormData) => {
+    const submitButton = document.getElementById("submit");
+    submitButton?.setAttribute("disabled", "true");
+
+    const submitTime = new Date().getTime();
+    const enteredGameTime = formData.get("time");
+    const commentatorPosition = mmssToSeconds(enteredGameTime);
+
+    // get stream start from commentator object
+    const commentator = await fetch(`/api/commentator?id=${commentatorId}`, {
+      method: "GET",
+    });
+    const commentatorData = await commentator.json();
+    if (!commentatorData || !commentatorData.streamStart) {
+      console.error("Commentator not found.");
+      return;
+    }
+    const streamStart = new Date(commentatorData.streamStart).getTime();
+
+    // TODO: Calculate offset
+    const offset = (submitTime - streamStart) / 1000 - commentatorPosition;
+
+    const response = await fetch("/api/commentator/sync/addOffset", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: commentatorId, offset }),
+    });
+    const responseData = await response.json();
+    console.log("Offset saved:", responseData);
+
+    // Show success message
+    submitButton?.classList.remove("bg-primary");
+    submitButton?.classList.add("bg-success");
+    setSyncText("Synchronized");
+
+    // change text back after 5 seconds
+    setTimeout(() => {
+      submitButton?.removeAttribute("disabled");
+      submitButton?.classList.remove("bg-success");
+      submitButton?.classList.add("bg-primary");
+      setSyncText("Synchronize");
+    }, 5000);
+  };
 
   return (
     <>
@@ -61,7 +121,7 @@ const Synchronize = () => {
                   Select the service as "Custom" and input the following URL:
                 </li>
                 <code className="ml-5 bg-stroke dark:bg-waterloo dark:text-black p-1">
-                  rtmps://global-live.mux.com:443/app
+                  rtmp://global-live.mux.com:443/app
                 </code>
                 <li>Input the Stream Key:</li>
                 <code className="ml-5 bg-stroke dark:bg-waterloo dark:text-black p-1">
@@ -81,7 +141,7 @@ const Synchronize = () => {
                 The time should be in the format of <code>mm:ss</code>.
               </p>
               <form
-                action="{% url 'commentators:addOffset' commentator.id %}"
+                action={calculateOffset}
                 method="post"
                 id="timeForm"
                 className="flex flex-col max-w-max"
@@ -104,8 +164,9 @@ const Synchronize = () => {
                   required
                 />
                 <input
+                  id="submit"
                   type="submit"
-                  value="Synchronize"
+                  value={syncText}
                   className="bg-primary text-white rounded px-4 py-2 cursor-pointer"
                 />
               </form>
