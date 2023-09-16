@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 
 const MUX_LS_API_URL = "https://api.mux.com/video/v1/live-streams";
-const TEST = true;
+const TEST = false;
 
 async function createLiveStream() {
   // Create new live stream on Mux
