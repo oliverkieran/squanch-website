@@ -1,11 +1,25 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import Select from "react-select";
+import gameData from "@/components/NextGames/GameData";
+import { GameOption } from "@/types/game";
+
+function prepareOptions() {
+  const options: GameOption[] = [];
+  gameData.forEach((game) => {
+    const title = `${game.homeTeam} vs ${game.awayTeam}`;
+    options.push({ value: title, label: title });
+  });
+  return options;
+}
 
 const Stream = () => {
   const [commentator, setCommentator] = useState("");
   const [game, setGame] = useState("");
   const router = useRouter();
+
+  const gameOptions = prepareOptions();
 
   const createStream = async (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -49,13 +63,17 @@ const Stream = () => {
             onChange={(e) => setCommentator(e.target.value)}
             value={commentator}
           />
-          <input
-            type="text"
+          <Select
+            className="flex flex-col w-1/2 mb-5 basic-single"
+            classNamePrefix="select"
+            onChange={(option: GameOption | null) =>
+              setGame(option?.value || "")
+            }
+            isClearable={true}
+            isSearchable={true}
             name="game"
-            placeholder="Game"
-            className="flex flex-col w-1/2 border-b p-2 mb-5"
-            onChange={(e) => setGame(e.target.value)}
-            value={game}
+            placeholder="Choose a Game"
+            options={gameOptions}
           />
           <input
             type="submit"

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { toast } from "react-hot-toast";
 
 const capitalize = (str, lower = false) =>
   (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) =>
@@ -79,6 +80,10 @@ const Synchronize = () => {
     submitButton?.classList.remove("bg-primary");
     submitButton?.classList.add("bg-success");
     setSyncText("Synchronized");
+    toast.success("Your stream is now synchronized!", {
+      duration: 4000,
+      position: "bottom-center",
+    });
 
     // change text back after 5 seconds
     setTimeout(() => {
@@ -116,17 +121,32 @@ const Synchronize = () => {
                 Broadcaster Software):
               </p>
               <ol className="list-decimal list-inside mb-4">
-                <li>Open OBS and go to Settings &gt; Stream.</li>
                 <li>
-                  Select the service as "Custom" and input the following URL:
+                  Open OBS and go to Settings &gt; Stream. (
+                  <a
+                    href="https://obsproject.com/download"
+                    className="text-primary hover:text-primaryho dark:text-stroke dark:hover:text-strokeho"
+                  >
+                    Download OBS here.
+                  </a>
+                  )
                 </li>
-                <code className="ml-5 bg-stroke dark:bg-waterloo dark:text-black p-1">
-                  rtmp://global-live.mux.com:443/app
+                <li>
+                  Select the service as "Custom" and for Server input the
+                  following URL:
+                </li>
+                <code className="ml-5 bg-stroke dark:bg-btndark dark:text-stroke p-1">
+                  rtmp://global-live.mux.com:5222/app
                 </code>
                 <li>Input the Stream Key:</li>
-                <code className="ml-5 bg-stroke dark:bg-waterloo dark:text-black p-1">
+                <code className="ml-5 bg-stroke dark:bg-btndark dark:text-stroke p-1">
                   {streamKey}
                 </code>
+                <li>
+                  Click "Start Streaming" and a few seconds later your're live.
+                  To synchronize your commentary, wait for the game to begin,
+                  input the current game time and hit "Synchronize."
+                </li>
               </ol>
             </div>
             <div className="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6">

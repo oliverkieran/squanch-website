@@ -18,6 +18,7 @@ module.exports = {
       current: "currentColor",
       transparent: "transparent",
       stroke: "#EEEEEE",
+      strokeho: "#E0E0E0",
       strokedark: "#2D2F40",
       hoverdark: "#252A42",
       titlebg: "#ADFFF8",
