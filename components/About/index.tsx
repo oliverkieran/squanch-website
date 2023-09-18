@@ -77,10 +77,10 @@ const About = () => {
                 Chrome Extension
               </h2>
               <p>
-                It's super eassy to get started with Squanch. Just download the
-                Chrome Extension and you're ready to go! The extension will
-                automatically detect when you're watching a football game and
-                will give you the option to choose a commentator.
+                It is effortless to get started. Download the Chrome Extension
+                and you are ready. The extension will automatically detect the
+                football game that you are watching and enable you to choose
+                your commentator.
               </p>
 
               <div className="mt-7.5 flex justify-center items-center">

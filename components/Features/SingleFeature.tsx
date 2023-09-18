@@ -4,7 +4,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, description, tag, tagColor} = feature;
+  const { icon, title, description, tag, tagColor } = feature;
+  const titleFirstWord = title.split(" ")[0];
+  const titleSecondWord = title.split(" ")[1];
+  const tagColorClass = `bg-${tagColor} inline-block px-2 py-1 mb-5 text-xs font-medium text-black rounded`;
+
   return (
     <>
       <motion.div
@@ -29,11 +33,9 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
           <Image src={icon} width={20} height={20} alt="title" />
         </div>
         <h3 className="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-5 mb-2">
-          {title}
+          {titleFirstWord} <br /> {titleSecondWord}
         </h3>
-        <div className={`bg-${tagColor} inline-block px-2 py-1 mb-5 text-xs font-medium text-black rounded`}>
-          {tag}
-        </div>
+        <div className={tagColorClass}>{tag}</div>
         <p>{description}</p>
       </motion.div>
     </>

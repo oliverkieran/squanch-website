@@ -6,7 +6,7 @@ const featuresData: Feature[] = [
     icon: "/images/icon/icon-01.svg",
     title: "Quick Setup",
     description:
-      "All it takes to listen to your favorite commentators is just one simple download. Simply download the app and you're ready to go!",
+      "Simply download our extension and you are all set to listen to your favourite commentators.",
     tag: "Viewer",
     tagColor: "gametime",
   },
@@ -15,16 +15,16 @@ const featuresData: Feature[] = [
     icon: "/images/icon/icon-06.svg",
     title: "Automatic Synchronization",
     description:
-      "Once a commentator is selected, the app will automatically synchronize the audio with the game.",
+      "Select your commentator and the audio will be synchronized with the game automatically.",
     tag: "Viewer",
     tagColor: "gametime",
   },
   {
     id: 3,
     icon: "/images/icon/icon-03.svg",
-    title: "Custom Fine Tuning",
+    title: "Custom Fine-Tuning",
     description:
-      "In case our synchronization is not spot-on, we provide you with fine-tuning controls to get the synchronization just right.",
+      "Use the fine-tuning controls to improve the automatic synchronization. ",
     tag: "Viewer",
     tagColor: "gametime",
   },
@@ -33,9 +33,9 @@ const featuresData: Feature[] = [
     icon: "/images/icon/icon-04.svg",
     title: "One-Click Synchronization",
     description:
-      "As a commentator, all you need to do is click one single button to synchronize your audio with all your fans.",
+      "Click one button to synchronize your audio with the video of your fans and you are ready to commentate. ",
     tag: "Commentator",
-    tagColor: "commentator",
+    tagColor: "info",
   },
 ];
 

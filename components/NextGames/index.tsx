@@ -37,8 +37,9 @@ const NextGames = () => {
                 Synchronized Games on Squanch
               </h2>
               <p className="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">
-                Below are all of the upcoming games, where Squanch's
-                synchronization solution will be activated.
+                Below you find the upcoming games for which our solution will be
+                available. Squanch is generally available in the Chrome browser
+                on Sky Switzerland and Blue Sports.
               </p>
             </div>
             {/* <!-- ==== List Start ==== --> */}
@@ -61,7 +62,7 @@ const NextGames = () => {
                 data-tally-open="w8alEA"
                 data-tally-emoji-text="⚽"
                 data-tally-emoji-animation="bounce"
-                data-tally-auto-close="5000"
+                data-tally-auto-close="2000"
                 className="bg-btndark hover:bg-hoverdark text-white rounded-full px-5 py-2"
               >
                 Request a game

@@ -29,7 +29,7 @@ const Hero = () => {
               </p>
 
               <p className="text-black dark:text-white mt-10">
-                Which experience do you want to try out?
+                Which experience do you want to try?
               </p>
 
               <div className="mt-5">
