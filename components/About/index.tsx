@@ -33,13 +33,13 @@ const About = () => {
               className="animate_left w-2/3 md:w-1/2 relative mx-auto aspect-[588/526.5]"
             >
               <Image
-                src="/images/about/extension-showcase.svg"
+                src="/images/about/extension-showcase.png"
                 alt="About"
                 className="dark:hidden"
                 fill
               />
               <Image
-                src="/images/about/extension-showcase.svg"
+                src="/images/about/extension-showcase.png"
                 alt="About"
                 className="hidden dark:block"
                 fill

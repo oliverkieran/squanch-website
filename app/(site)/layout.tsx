@@ -6,6 +6,7 @@ import Lines from "@/components/Lines";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import { Analytics } from "@vercel/analytics";
 const inter = Inter({ subsets: ["latin"] });
 import "../globals.css";
 
@@ -24,13 +25,13 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="light"
         >
-
-            <Lines />
-            <Header />
-            <ToasterContext />
-            {children}
-            <Footer />
-            <ScrollToTop />
+          <Lines />
+          <Header />
+          <ToasterContext />
+          {children}
+          <Analytics />
+          <Footer />
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>
