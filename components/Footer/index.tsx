@@ -87,7 +87,7 @@ const Footer = () => {
                   <ul>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="inline-block hover:text-primary mb-3"
                       >
                         Home
@@ -95,7 +95,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#features"
+                        href="/#features"
                         className="inline-block hover:text-primary mb-3"
                       >
                         Features
@@ -111,7 +111,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/#commentate"
                         className="inline-block hover:text-primary mb-3"
                       >
                         Commentate
@@ -119,7 +119,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#faq"
+                        href="/#faq"
                         className="inline-block hover:text-primary mb-3"
                       >
                         FAQ's
@@ -153,23 +153,23 @@ const Footer = () => {
                   <ul>
                     <li>
                       <a
-                        href="#"
+                        href="/support"
                         className="inline-block hover:text-primary mb-3"
                       >
                         Company
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a
                         href="#"
                         className="inline-block hover:text-primary mb-3"
                       >
                         Our Blog
                       </a>
-                    </li>
+                    </li> */}
                     <li>
                       <a
-                        href="#support"
+                        href="/support"
                         className="inline-block hover:text-primary mb-3"
                       >
                         Contact Us
@@ -212,7 +212,10 @@ const Footer = () => {
                         className="w-full dark:bg-black border border-stroke dark:border-strokedark shadow-solid-11 dark:shadow-none rounded-full focus:outline-none focus:border-primary dark:focus:border-primary py-3 px-6"
                       />
 
-                      <button aria-label="signup to newsletter" className="absolute right-0 p-4">
+                      <button
+                        aria-label="signup to newsletter"
+                        className="absolute right-0 p-4"
+                      >
                         <svg
                           className="fill-[#757693] dark:fill-white hover:fill-primary"
                           width="20"
