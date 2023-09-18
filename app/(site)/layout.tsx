@@ -19,6 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="eng">
+      <head>
+        <script async src="https://tally.so/widgets/embed.js"></script>
+      </head>
       <body className={`dark:bg-black`}>
         <ThemeProvider
           enableSystem={false}

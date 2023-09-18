@@ -42,8 +42,8 @@ const NextGames = () => {
               </p>
             </div>
             {/* <!-- ==== List Start ==== --> */}
-            <div className="flex justify-center">
-              <ul className="max-w-3xl divide-y divide-gray-200 dark-divide-gray-700">
+            <div className="flex flex-col items-center justify-center">
+              <ul className="max-w-3xl divide-y divide-gray-200 dark:divide-gray-700 mb-5">
                 {gameData.map((game) => (
                   <li key={game.time} className="pb-3 sm:pb-4">
                     <div className="inline-block px-2 py-1 mt-4 mb-2 text-xs font-medium text-black bg-titlebg2 rounded">
@@ -57,6 +57,15 @@ const NextGames = () => {
                   </li>
                 ))}
               </ul>
+              <button
+                data-tally-open="w8alEA"
+                data-tally-emoji-text="⚽"
+                data-tally-emoji-animation="bounce"
+                data-tally-auto-close="5000"
+                className="bg-btndark hover:bg-hoverdark text-white rounded-full px-5 py-2"
+              >
+                Request a game
+              </button>
             </div>
 
             {/* <!-- ==== List End ==== --> */}
