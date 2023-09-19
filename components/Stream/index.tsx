@@ -77,7 +77,7 @@ const Stream = () => {
           />
           <input
             type="submit"
-            className="bg-primary text-white hover:bg-primaryho px-4 py-2 rounded-lg mt-2"
+            className="bg-blue-400 hover:bg-blue-600 text-white  px-4 py-2 rounded-lg mt-2"
             value="Go Live"
           />
         </form>

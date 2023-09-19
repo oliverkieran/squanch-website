@@ -36,13 +36,13 @@ const Hero = () => {
                 <div className="flex flex-wrap gap-5">
                   <Link
                     href="#extension"
-                    className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
+                    className="flex bg-blue-400 hover:bg-blue-600 dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
                   >
                     Viewer
                   </Link>
                   <Link
                     href="/commentate"
-                    className="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
+                    className="flex bg-blue-400 hover:bg-blue-600 dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
                   >
                     Commentator
                   </Link>

@@ -63,7 +63,7 @@ const NextGames = () => {
                 data-tally-emoji-text="⚽"
                 data-tally-emoji-animation="bounce"
                 data-tally-auto-close="2000"
-                className="bg-btndark hover:bg-hoverdark text-white rounded-full px-5 py-2"
+                className="bg-blue-400 hover:bg-blue-600 text-white rounded-full px-5 py-2"
               >
                 Request a game
               </button>
