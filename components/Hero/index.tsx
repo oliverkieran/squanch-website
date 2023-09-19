@@ -23,7 +23,7 @@ const Hero = () => {
                 Football Commentary
               </h1>
               <p>
-                Use our Chrome Extension to commentator games yourself or to
+                Use our Chrome Extension to commentatate games yourself or to
                 listen to other crowdsourced commentators.{" "}
                 <strong>For free</strong>.
               </p>
