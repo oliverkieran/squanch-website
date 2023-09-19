@@ -276,6 +276,11 @@ const Footer = () => {
                     T&C
                   </a>
                 </li>
+                <li>
+                  <a href="/acknowledgments" className="hover:text-primary">
+                    Acknowledgments
+                  </a>
+                </li>
               </ul>
             </motion.div>
 

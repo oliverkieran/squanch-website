@@ -64,7 +64,7 @@ const Stream = () => {
             value={commentator}
           />
           <Select
-            className="flex flex-col md-w-1/2 mb-5 basic-single"
+            className="flex flex-col md:w-1/2 mb-5 basic-single"
             classNamePrefix="select"
             onChange={(option: GameOption | null) =>
               setGame(option?.value || "")
