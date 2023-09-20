@@ -63,7 +63,7 @@ const Team = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://twitter.com/SvenWermuth"
                     className="text-gray-500 hover:text-blue-400 dark:hover:text-white transition-all duration-300"
                   >
                     <svg
@@ -128,7 +128,7 @@ const Team = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://twitter.com/Oliver_Kieran_"
                     className="text-gray-500 hover:text-blue-400 dark:hover:text-white transition-all duration-300"
                   >
                     <svg
@@ -143,7 +143,7 @@ const Team = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://github.com/oliverkieran"
                     className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
                   >
                     <svg
