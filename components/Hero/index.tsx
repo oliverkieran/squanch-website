@@ -16,9 +16,9 @@ const Hero = () => {
                 🔥 Now available in the Chrome Web Store
               </h4>
               <h1 className="text-black dark:text-white text-3xl xl:text-hero font-bold mb-5 pr-16 ">
-                Become A Part Of
-                <span className="inline-block relative before:absolute before:bottom-2.5 before:left-0 before:w-full before:h-3 before:bg-titlebg dark:before:bg-titlebgdark before:-z-1 mr-2.5 min-[571px]:ml-2.5 lg:ml-0">
-                  Crowdsourced
+                Become A Part Of{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-400 from-sky-500">
+                  Crowdsourced{" "}
                 </span>
                 Football Commentary
               </h1>
@@ -36,13 +36,13 @@ const Hero = () => {
                 <div className="flex flex-wrap gap-5">
                   <Link
                     href="#extension"
-                    className="flex bg-blue-400 hover:bg-blue-600 dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
+                    className="flex bg-blue-400 hover:bg-gradient-to-r hover:to-emerald-400 hover:from-sky-500 dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
                   >
                     Viewer
                   </Link>
                   <Link
                     href="/commentate"
-                    className="flex bg-blue-400 hover:bg-blue-600 dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
+                    className="flex bg-blue-400 hover:bg-gradient-to-r hover:to-emerald-400 hover:from-sky-500 dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5"
                   >
                     Commentator
                   </Link>
