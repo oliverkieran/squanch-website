@@ -64,16 +64,16 @@ const Extension = () => {
               className="animate_right md:w-1/2 mx-auto"
             >
               <h4 className="text-black dark:text-white font-medium uppercase">
-                <span className="bg-meta text-white text-metatitle inline-flex rounded-full py-1 px-4.5 mr-4 mb-4 uppercase ">
+                <span className="bg-sky-400 text-white text-metatitle inline-flex rounded-full py-1 px-4.5 mr-4 mb-4 uppercase ">
                   New
                 </span>{" "}
                 Super Easy Setup
               </h4>
               <h2 className="relative font-bold text-black dark:text-white text-3xl xl:text-hero mb-6">
-                Download the
-                <span className="mx-2.5 inline-block relative before:absolute before:bottom-2.5 before:left-0 before:w-full before:h-3 before:bg-gametime dark:before:bg-titlebgdark before:-z-1">
+                Download the{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-400 from-sky-500">
                   Squanch
-                </span>
+                </span>{" "}
                 Chrome Extension
               </h2>
               <p>
@@ -84,7 +84,7 @@ const Extension = () => {
               </p>
 
               <div className="mt-7.5 flex justify-center items-center">
-                <button className="p-5 text-black font-semibold bg-gametime rounded-full">
+                <button className="text-white font-semibold bg-emerald-400 hover:bg-gradient-to-r hover:to-emerald-400 hover:from-sky-500 hover:text-white px-7.5 py-3 rounded-full">
                   Download Here
                 </button>
               </div>

@@ -152,7 +152,9 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-6 mt-7 lg:mt-0">
-            <button className="px-5 py-2 text-black bg-gametime rounded-3xl">Download</button>
+            <button className="px-5 py-2 text-white bg-emerald-400 hover:bg-gradient-to-r hover:to-emerald-400 hover:from-sky-500 hover:text-white rounded-full">
+              Download
+            </button>
             <ThemeToggler />
           </div>
         </div>
