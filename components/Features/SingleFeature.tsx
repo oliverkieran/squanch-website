@@ -7,7 +7,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, description, tag, tagColor } = feature;
   const titleFirstWord = title.split(" ")[0];
   const titleSecondWord = title.split(" ")[1];
-  const tagColorClass = `bg-${tagColor} inline-block px-2 py-1 mb-5 text-xs font-medium text-black rounded`;
+  const tagColorClass = `bg-${tagColor} inline-block px-2 py-1 mb-5 text-xs font-medium text-white rounded`;
 
   return (
     <>

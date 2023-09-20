@@ -4,5 +4,5 @@ export type Feature = {
   title: string;
   description: string;
   tag: string;
-  tagColor: "gametime" | "info";
+  tagColor: "emerald-400" | "sky-400";
 };

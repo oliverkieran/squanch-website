@@ -8,7 +8,7 @@ const featuresData: Feature[] = [
     description:
       "Simply download our extension and you are all set to listen to your favourite commentators.",
     tag: "Viewer",
-    tagColor: "gametime",
+    tagColor: "emerald-400",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const featuresData: Feature[] = [
     description:
       "Select your commentator and the audio will be synchronized with the game automatically.",
     tag: "Viewer",
-    tagColor: "gametime",
+    tagColor: "emerald-400",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const featuresData: Feature[] = [
     description:
       "Use the fine-tuning controls to improve the automatic synchronization. ",
     tag: "Viewer",
-    tagColor: "gametime",
+    tagColor: "emerald-400",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const featuresData: Feature[] = [
     description:
       "Click one button to synchronize your audio with the video of your fans and you are ready to commentate. ",
     tag: "Commentator",
-    tagColor: "info",
+    tagColor: "sky-400",
   },
 ];
 
