@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import ThemeToggler from "./ThemeToggler";
+import NewsletterPopup from "../NewsletterPopup";
 import menuData from "./menuData";
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 w-full z-99999 py-7 ${
+      className={`fixed left-0 top-0 w-full z-50 py-7 ${
         stickyMenu
           ? "bg-white dark:bg-black shadow !py-4 transition duration-100"
           : ""
@@ -152,9 +153,10 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-6 mt-7 lg:mt-0">
-            <button className="px-5 py-2 text-white bg-emerald-400 hover:bg-gradient-to-r hover:to-emerald-400 hover:from-sky-500 hover:text-white rounded-full">
+            {/* <button className="px-5 py-2 text-white bg-emerald-400 hover:bg-gradient-to-r hover:to-emerald-400 hover:from-sky-500 hover:text-white rounded-full">
               Download
-            </button>
+            </button> */}
+            <NewsletterPopup />
             <ThemeToggler />
           </div>
         </div>

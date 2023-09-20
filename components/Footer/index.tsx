@@ -203,13 +203,19 @@ const Footer = () => {
                     Subscribe to receive future updates
                   </p>
 
-                  <form action="https://formbold.com/s/35XZR">
+                  <form action="https://formbold.com/s/35XZR" method="POST">
                     <div className="relative">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        className="w-full dark:bg-black border border-stroke dark:border-strokedark shadow-solid-11 dark:shadow-none rounded-t-3xl focus:outline-none focus:border-primary dark:focus:border-primary py-3 px-6"
+                      />
                       <input
                         type="email"
                         name="email"
                         placeholder="Email address"
-                        className="w-full dark:bg-black border border-stroke dark:border-strokedark shadow-solid-11 dark:shadow-none rounded-full focus:outline-none focus:border-primary dark:focus:border-primary py-3 px-6"
+                        className="w-full dark:bg-black border border-stroke dark:border-strokedark shadow-solid-11 dark:shadow-none rounded-b-3xl focus:outline-none focus:border-primary dark:focus:border-primary py-3 px-6"
                       />
 
                       <button

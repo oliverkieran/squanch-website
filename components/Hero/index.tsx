@@ -13,7 +13,7 @@ const Hero = () => {
           <div className="lg:flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" lg:w-1/2 mb-12 lg:mb-0">
               <h4 className="text-black dark:text-white text-lg font-medium mb-4.5">
-                🔥 Now available in the Chrome Web Store
+                🔜 available in the Chrome Web Store
               </h4>
               <h1 className="text-black dark:text-white text-3xl xl:text-hero font-bold mb-5 pr-16 ">
                 Become A Part Of{" "}

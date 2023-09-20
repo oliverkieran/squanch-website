@@ -5,7 +5,8 @@ import Footer from "@/components/Footer";
 import Lines from "@/components/Lines";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "next-themes";
+import { NextUIProvider } from "@nextui-org/react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 import "../globals.css";
@@ -23,19 +24,21 @@ export default function RootLayout({
         <script async src="https://tally.so/widgets/embed.js"></script>
       </head>
       <body className={`dark:bg-black`}>
-        <ThemeProvider
-          enableSystem={false}
-          attribute="class"
-          defaultTheme="light"
-        >
-          <Lines />
-          <Header />
-          <ToasterContext />
-          {children}
-          <Analytics />
-          <Footer />
-          <ScrollToTop />
-        </ThemeProvider>
+        <NextUIProvider>
+          <NextThemesProvider
+            enableSystem={false}
+            attribute="class"
+            defaultTheme="light"
+          >
+            <Lines />
+            <Header />
+            <ToasterContext />
+            {children}
+            <Analytics />
+            <Footer />
+            <ScrollToTop />
+          </NextThemesProvider>
+        </NextUIProvider>
       </body>
     </html>
   );
