@@ -19,7 +19,7 @@ const Contact = () => {
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
-      <section id="support" className="px-4 md:px-8 2xl:px-0">
+      <section id="contact" className="px-4 md:px-8 2xl:px-0">
         <div className="mx-auto max-w-c-1390 relative pt-10 lg:pt-15 xl:pt-20 px-7.5 lg:px-15 xl:px-20 overflow-hidden">
           <div className="absolute -z-1 rounded-lg left-0 top-0 w-full h-2/3 bg-gradient-to-t from-[#fff] to-[#dee7ff47] dark:bg-gradient-to-t dark:from-[#24283E] dark:to-[#252A42]"></div>
           <div className="absolute -z-1 bottom-[-255px] left-0 w-full h-full">
@@ -60,10 +60,7 @@ const Contact = () => {
                 Send us a message
               </h2>
 
-              <form
-                action="https://formbold.com/s/9mN8j"
-                method="POST"
-              >
+              <form action="https://formbold.com/s/9mN8j" method="POST">
                 <div className="flex flex-col lg:flex-row lg:justify-between gap-7.5 lg:gap-14 mb-7.5">
                   <input
                     type="text"
@@ -123,7 +120,10 @@ const Contact = () => {
                     </label>
                   </div>
 
-                  <button aria-label="send message" className="inline-flex items-center gap-2.5 bg-black hover:bg-blackho ease-in-out duration-300 dark:bg-btndark font-medium text-white rounded-full px-6 py-3">
+                  <button
+                    aria-label="send message"
+                    className="inline-flex items-center gap-2.5 bg-blue-400 hover:bg-gradient-to-r hover:to-emerald-400 hover:from-sky-500 ease-in-out duration-300 dark:bg-btndark font-medium text-white rounded-full px-6 py-3"
+                  >
                     Send Message
                     <svg
                       className="fill-white"

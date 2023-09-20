@@ -1,5 +1,7 @@
 import React from "react";
+import AboutUs from "@/components/About";
 import Contact from "@/components/Contact";
+import Team from "@/components/Team";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,12 +10,16 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const SupportPage = () => {
+const AboutUsPage = () => {
   return (
-    <div className="pt-40 pb-20">
-      <Contact />
-    </div>
+    <>
+      <div className="pt-40 pb-20">
+        <AboutUs />
+        <Team />
+        <Contact />
+      </div>
+    </>
   );
 };
 
-export default SupportPage;
+export default AboutUsPage;

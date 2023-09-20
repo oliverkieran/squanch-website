@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Hero from "@/components/Hero";
 import Brands from "@/components/Brands";
 import Feature from "@/components/Features";
-import About from "@/components/About";
+import Extension from "@/components/Extension";
 import NextGames from "@/components/NextGames";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -39,7 +39,7 @@ export default function Home() {
       <Brands />
       <NextGames />
       <Feature />
-      <About />
+      <Extension />
       <FAQ />
       <Contact />
     </main>
