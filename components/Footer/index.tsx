@@ -271,14 +271,22 @@ const Footer = () => {
                     Privacy Policy
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#" className="hover:text-primary">
                     T&C
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a href="/acknowledgments" className="hover:text-primary">
                     Acknowledgments
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://squanch-v1.webflow.io/"
+                    className="hover:text-primary"
+                  >
+                    Squanch v1
                   </a>
                 </li>
               </ul>
