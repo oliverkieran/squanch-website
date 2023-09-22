@@ -2,21 +2,28 @@ import { Game } from "@/types/game";
 
 const gameData: Game[] = [
   {
-    homeTeam: "Manchester United",
-    awayTeam: "Brighton",
-    date: "16. September",
+    homeTeam: "Wolverhampton",
+    awayTeam: "Manchester City",
+    date: "30. September",
     time: "16:00",
   },
   {
-    homeTeam: "Everton",
-    awayTeam: "Arsenal",
-    date: "17. September",
-    time: "17:30",
-  },{
-    homeTeam: "Manchester City",
-    awayTeam: "Nottingham Forest",
-    date: "23. September",
+    homeTeam: "Manchester United",
+    awayTeam: "Crystal Palace",
+    date: "30. September",
     time: "16:00",
+  },
+  {
+    homeTeam: "AC Milan",
+    awayTeam: "SS Lazio",
+    date: "17. September",
+    time: "18:00",
+  },
+  {
+    homeTeam: "Tottenham Hotspurs",
+    awayTeam: "Liverpool",
+    date: "30. September",
+    time: "18:30",
   },
 ];
 
