@@ -12,7 +12,7 @@ import {
 } from "@nextui-org/react";
 import { toast } from "react-hot-toast";
 
-export default function NewsletterPopup() {
+export default function NewsletterPopup({ buttonText }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -40,9 +40,9 @@ export default function NewsletterPopup() {
     <>
       <Button
         onPress={onOpen}
-        className="px-5 py-2 text-white bg-emerald-400 hover:bg-gradient-to-r hover:to-emerald-400 hover:from-sky-500 hover:text-white rounded-full"
+        className="px-5 py-2 font-semibold text-white bg-emerald-400 hover:bg-gradient-to-r hover:to-emerald-400 hover:from-sky-500 hover:text-white rounded-full"
       >
-        Download
+        {buttonText}
       </Button>
       <Modal
         isOpen={isOpen}

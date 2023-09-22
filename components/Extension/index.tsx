@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import NewsletterPopup from "@/components/NewsletterPopup";
 
 const Extension = () => {
   return (
@@ -84,9 +85,7 @@ const Extension = () => {
               </p>
 
               <div className="mt-7.5 flex justify-center items-center">
-                <button className="text-white font-semibold bg-emerald-400 hover:bg-gradient-to-r hover:to-emerald-400 hover:from-sky-500 hover:text-white px-7.5 py-3 rounded-full">
-                  Download Here
-                </button>
+                <NewsletterPopup buttonText="Join Waitlist" />
               </div>
             </motion.div>
           </div>

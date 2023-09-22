@@ -156,7 +156,7 @@ const Header = () => {
             {/* <button className="px-5 py-2 text-white bg-emerald-400 hover:bg-gradient-to-r hover:to-emerald-400 hover:from-sky-500 hover:text-white rounded-full">
               Download
             </button> */}
-            <NewsletterPopup />
+            <NewsletterPopup buttonText="Join Waitlist" />
             <ThemeToggler />
           </div>
         </div>
