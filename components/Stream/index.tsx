@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import Select from "react-select";
+//import Select from "react-select";
+import { Input, Select, SelectItem } from "@nextui-org/react";
 import gameData from "@/components/NextGames/GameData";
 import { GameOption } from "@/types/game";
 
@@ -55,26 +56,29 @@ const Stream = () => {
         </p>
 
         <form onSubmit={createStream}>
-          <input
+          <Input
             type="text"
             name="name"
             placeholder="Name"
-            className="flex flex-col md:w-1/2 border-b p-2 mb-5"
+            variant="underlined"
+            className="flex flex-col md:w-1/2 mb-5"
             onChange={(e) => setCommentator(e.target.value)}
             value={commentator}
           />
           <Select
-            className="flex flex-col md:w-1/2 mb-5 basic-single"
-            classNamePrefix="select"
-            onChange={(option: GameOption | null) =>
-              setGame(option?.value || "")
-            }
-            isClearable={true}
-            isSearchable={true}
-            name="game"
-            placeholder="Choose a Game"
-            options={gameOptions}
-          />
+            items={gameData}
+            label=""
+            placeholder="Select a game"
+            variant="underlined"
+            className="flex flex-col md:w-1/2 mb-5"
+            onChange={(e) => setGame(e.target.value)}
+          >
+            {(item) => (
+              <SelectItem key={item.title} value={item.title}>
+                {item.title}
+              </SelectItem>
+            )}
+          </Select>
           <input
             type="submit"
             className="bg-blue-400 hover:bg-blue-600 text-white  px-4 py-2 rounded-lg mt-2"
