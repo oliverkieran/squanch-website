@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 
 type FaqData = {
@@ -9,8 +9,41 @@ type FaqData = {
   ans: string;
 };
 
+function detectLinks(str) {
+  const regex = /\(([^)]+)\)\[([^\]]+)\]/g;
+  const parts: ReactNode[] = [];
+
+  let lastIndex = 0;
+  let result;
+
+  while ((result = regex.exec(str)) !== null) {
+    parts.push(str.slice(lastIndex, result.index));
+    parts.push(
+      <a
+        href={result[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-500 hover:text-blue-600"
+      >
+        {result[1]}
+      </a>
+    );
+    lastIndex = regex.lastIndex;
+  }
+
+  parts.push(str.slice(lastIndex));
+
+  return parts;
+}
+
 const FAQItem = ({ faqData }: { faqData: FaqData }) => {
   const { activeFaq, id, handleFaqToggle, quest, ans } = faqData;
+
+  // parse answer for links
+  // const linkRegex = /\[(.*?)\]\((.*?)\)/g;
+  // const linkMatches = ans.match(linkRegex);
+
+  // console.log("Link matches: ", linkMatches);
 
   return (
     <>
@@ -60,7 +93,7 @@ const FAQItem = ({ faqData }: { faqData: FaqData }) => {
             activeFaq === id ? "block" : "hidden"
           }`}
         >
-          {ans}
+          {detectLinks(ans)}
         </p>
       </div>
     </>

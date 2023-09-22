@@ -4,7 +4,7 @@ const faqData: FAQ[] = [
   {
     id: 1,
     quest: "I want to commentate a game. How do I do that?",
-    ans: "Simply click the 'Commentate' button in the navigation bar and you will be taken to a page where you can select a fictious character and a game to commentate. To synchronize your voice with the game of other viewers, input the current game time and click the 'Synchronize' button.",
+    ans: "To be able to commentate, you need to instal (OBS)[https://obsproject.com/download] (Open Broadcaster Software) and watch the game on cable TV. Then simply click the 'Commentate' button in the navigation bar and you will be taken to a page where you will be given the required live streaming details. To synchronize your voice with the game of other viewers, input the current game time and click the 'Synchronize' button.",
   },
   {
     id: 2,
