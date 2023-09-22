@@ -22,7 +22,7 @@ const gameData: Game[] = [
     homeTeam: "AC Milan",
     awayTeam: "SS Lazio",
     title: "Mailand vs Lazio",
-    date: "17. September",
+    date: "30. September",
     time: "18:00",
   },
   {
