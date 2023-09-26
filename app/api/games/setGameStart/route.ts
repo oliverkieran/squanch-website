@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 
 // POST /api/games/setGameStart
-export async function POST(req: NextRequest) {
+export async function PUT(req: NextRequest) {
   const { title, startTs } = await req.json();
   if (!title || !startTs) {
     return NextResponse.json(
