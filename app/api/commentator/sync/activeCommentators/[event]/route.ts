@@ -15,7 +15,7 @@ export async function GET(
   const auth = Buffer.from(
     `${process.env.MUX_TOKEN_ID}:${process.env.MUX_TOKEN_SECRET}`
   ).toString("base64");
-  const muxUrl = "https://api.mux.com/video/v1/live-streams?status=active";
+  const muxUrl = "https://api.mux.com/video/v1/live-streams";
   const muxResponse = await fetch(muxUrl, {
     method: "GET",
     headers: {
@@ -36,7 +36,7 @@ export async function GET(
     const liveStreamIds = data.map((stream) => stream.id);
 
     // Get commentators with active streams and matching event
-    const commentators = await prisma.commentator.findMany({
+    const commentators: any = await prisma.commentator.findMany({
       where: {
         liveStreamId: {
           in: liveStreamIds,
@@ -49,6 +49,12 @@ export async function GET(
         commentator: true,
         game: true,
       },
+    });
+
+    // Remove all attributes from commentator except for firstname and lastname
+    commentators.forEach((commentator) => {
+      const { id, firstname, lastname } = commentator.commentator;
+      commentator.commentator = { id, firstname, lastname };
     });
 
     return NextResponse.json(commentators);
