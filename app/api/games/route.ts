@@ -7,7 +7,7 @@ export async function GET() {
   return NextResponse.json(response);
 }
 
-// POST /api/users
+// POST /api/games
 export async function POST(req: NextRequest) {
   const { title } = await req.json();
   const response = await prisma.game.create({
