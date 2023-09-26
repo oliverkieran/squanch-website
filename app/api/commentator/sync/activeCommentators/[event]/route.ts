@@ -22,6 +22,9 @@ export async function GET(
       "Content-Type": "application/json",
       Authorization: `Basic ${auth}`,
     },
+    next: {
+      revalidate: 10,
+    },
   });
 
   if (!muxResponse.ok) {
@@ -58,5 +61,7 @@ export async function GET(
     });
 
     return NextResponse.json(commentators);
+  } else {
+    return NextResponse.json([]);
   }
 }
