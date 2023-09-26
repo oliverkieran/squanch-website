@@ -15,7 +15,7 @@ export async function GET(
   const auth = Buffer.from(
     `${process.env.MUX_TOKEN_ID}:${process.env.MUX_TOKEN_SECRET}`
   ).toString("base64");
-  const muxUrl = "https://api.mux.com/video/v1/live-streams";
+  const muxUrl = "https://api.mux.com/video/v1/live-streams?status=active";
   const muxResponse = await fetch(muxUrl, {
     method: "GET",
     headers: {
