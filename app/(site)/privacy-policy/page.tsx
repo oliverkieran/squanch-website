@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - Squanch",
-  description: "This is Privacy Policy of Squanch",
+  description: "Privacy Policy of Squanch",
   // other metadata
 };
 
