@@ -17,6 +17,8 @@ model Commentator {
     streamKey     String?   @unique
     playbackId    String?   @unique
     gameOffset    Float?
+    createdAt     DateTime  @default(now()) @map(name: "created_at")
+    updatedAt     DateTime  @updatedAt @map(name: "updated_at")
     commentator   User?     @relation(fields: [commentatorId], references: [id])
     commentatorId String?
     game          Game?     @relation(fields: [gameId], references: [id])
@@ -29,6 +31,8 @@ model Game {
     startTimestamp Float?
     startTime      DateTime?
     endTime        DateTime?
+    createdAt      DateTime      @default(now()) @map(name: "created_at")
+    updatedAt      DateTime      @updatedAt @map(name: "updated_at")
     Commentators   Commentator[]
 }
 
